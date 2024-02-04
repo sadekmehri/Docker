@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    restart: on-failure
+    image: frontend-production
+    ports:
+      - '80:80'
